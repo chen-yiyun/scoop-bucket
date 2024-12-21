@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0.2",
+  "description": "一个Rimage的GUI版本，能够批量压缩图片且不影响观感。A GUI software use rimage to compress images batchly without affecting the look and feel. ",
+  "homepage": "https://github.com/Mikachu2333/rimage_gui",
+  "license": {
+    "identifier": "Unknown"
+  },
+  "depends": "7zip",
+  "url": "https://github.com/Mikachu2333/rimage_gui/releases/download/2.0.0.2/rimage_gui.exe#/dl.7z",
+  "hash": "FBF56ABFDABA63BD4BBC0E79826F3B5AA0624C21D1F32E4BC39994D4F5A97C50",
+  "pre_install": [
+    "7z x \"$dir\\`$PLUGINSDIR\\*.7z\" -o\"$dir\\`$PLUGINSDIR\\rimage_gui\"",
+    "Remove-Item -R -Path $dir\\resources",
+    "Move-Item $dir\\`$PLUGINSDIR\\rimage_gui\\* $dir -force",
+    "Remove-Item -R -Path $dir\\`$PLUGINSDIR"
+  ],
+  "bin": "rimage_gui.exe",
+  "shortcuts": [
+    [
+      "rimage_gui.exe",
+      "rimage_gui"
+    ]
+  ],
+  "checkver": {
+    "url": "https://github.com/Mikachu2333/rimage_gui/releases",
+    "regex": "/releases/tag/v(?<version>.+?)\""
+  },
+  "autoupdate": {
+    "url": "https://github.com/Mikachu2333/rimage_gui/releases/download/$version/rimage_gui.exe#/dl.7z"
+  }
+}
