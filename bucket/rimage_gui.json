@@ -7,7 +7,7 @@
   },
   "depends": "7zip",
   "url": "https://github.com/Mikachu2333/rimage_gui/releases/download/2.0.0.2/rimage_gui.exe#/dl.7z",
-  "hash": "FBF56ABFDABA63BD4BBC0E79826F3B5AA0624C21D1F32E4BC39994D4F5A97C50",
+  "hash": "e07f67fdfb4b9cd64671a8509a9a6e99b53b7d363d57dfbe70b7d82980a97a49",
   "pre_install": [
     "7z x \"$dir\\`$PLUGINSDIR\\*.7z\" -o\"$dir\\`$PLUGINSDIR\\rimage_gui\"",
     "Remove-Item -R -Path $dir\\resources",
