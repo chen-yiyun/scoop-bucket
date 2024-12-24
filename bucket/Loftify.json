@@ -5,7 +5,7 @@
   "license": "GPLv3",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/Robert-Stackflow/Loftify/releases/download/V2.4.0/Loftify-2.4.0-windows-x86_64.zip",
+      "url": "https://github.com/Robert-Stackflow/Loftify/releases/download/v2.4.0/Loftify-2.4.0-windows-x86_64.zip",
       "hash": "8d483742199c368baafcc2e4265b63ea83cfb05a"
     }
   },
