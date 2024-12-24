@@ -10,7 +10,7 @@
     }
   },
   "bin": "CloudOTP-2.4.6-windows-x86_64/CloudOTP.exe",
-  "shortcuts": [["CloudOTP.exe", "CloudOTP"]],
+  "shortcuts": [["CloudOTP-2.4.6-windows-x86_64/CloudOTP.exe", "CloudOTP"]],
   "checkver": {
     "github": "https://github.com/Robert-Stackflow/CloudOTP"
   },
