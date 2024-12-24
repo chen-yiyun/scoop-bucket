@@ -9,8 +9,8 @@
       "hash": "8d483742199c368baafcc2e4265b63ea83cfb05a"
     }
   },
-  "bin": "Loftify.exe",
-  "shortcuts": [["Loftify.exe", "Loftify"]],
+  "bin": "Loftify-2.4.0-windows-x86_64/Loftify.exe",
+  "shortcuts": [["Loftify-2.4.0-windows-x86_64/Loftify.exe", "Loftify"]],
   "checkver": {
     "github": "https://github.com/Robert-Stackflow/Loftify"
   },
