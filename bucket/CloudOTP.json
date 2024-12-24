@@ -6,7 +6,7 @@
   "architecture": {
     "64bit": {
       "url": "https://github.com/Robert-Stackflow/CloudOTP/releases/download/V2.4.6/CloudOTP-2.4.6-windows-x86_64.zip",
-      "hash": "8e4e0c0c4c1be5d8ad5e2a0deaab2c4ea50d1b38"
+      "hash": "8d8626f65e0090ddc1f2673dd440ac42923d939db1695d760ebac821d2ff958f"
     }
   },
   "bin": "CloudOTP.exe",
