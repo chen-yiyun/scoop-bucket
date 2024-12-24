@@ -1,0 +1,24 @@
+{
+  "version": "2.4.0",
+  "description": "A LOFTER third-party APP developed based on Flutter.基于Flutter开发的LOFTER第三方APP",
+  "homepage": "https://github.com/Robert-Stackflow/Loftify",
+  "license": "GPLv3",
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/Robert-Stackflow/Loftify/releases/download/V2.4.0/Loftify-2.4.0-windows-x86_64.zip",
+      "hash": "8d483742199c368baafcc2e4265b63ea83cfb05a"
+    }
+  },
+  "bin": "Loftify.exe",
+  "shortcuts": [["Loftify.exe", "Loftify"]],
+  "checkver": {
+    "github": "https://github.com/Robert-Stackflow/Loftify"
+  },
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/Robert-Stackflow/Loftify/releases/download/v$version/Loftify-$version-windows-x86_64.zip"
+      }
+    }
+  }
+}
