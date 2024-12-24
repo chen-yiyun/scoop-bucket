@@ -9,7 +9,7 @@
       "hash": "8d8626f65e0090ddc1f2673dd440ac42923d939db1695d760ebac821d2ff958f"
     }
   },
-  "bin": "CloudOTP.exe",
+  "bin": "CloudOTP-$version-windows-x86_64/CloudOTP.exe",
   "shortcuts": [["CloudOTP.exe", "CloudOTP"]],
   "checkver": {
     "github": "https://github.com/Robert-Stackflow/CloudOTP"
