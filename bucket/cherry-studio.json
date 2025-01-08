@@ -7,7 +7,7 @@
   },
   "depends": "7zip",
   "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v0.9.5/Cherry-Studio-0.9.5-portable.exe#/dl.7z",
-  "hash": "049368285d14e712c4af683e7e767886200bd959323a90ddfe5d931de7f215b5",
+  "hash": "df8d4693dc72ec52e776d4ebfbceb97c9565da8a8b83f17efd73b557cbc7e6a9",
   "pre_install": [
     "7z x \"$dir\\`$PLUGINSDIR\\*.7z\" -o\"$dir\\`$PLUGINSDIR\\app-64\"",
     "Remove-Item -R -Path $dir\\resources",
