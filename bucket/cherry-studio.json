@@ -1,26 +1,31 @@
 {
-  "version": "0.9.5",
-  "description": "🍒 Cherry Studio is a desktop client that supports for multiple LLM providers",
-  "homepage": "https://github.com/CherryHQ/cherry-studio",
-  "license": {
-    "identifier": "Apache License 2.0"
-  },
-  "depends": "7zip",
-  "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v0.9.5/Cherry-Studio-0.9.5-portable.exe#/dl.7z",
-  "hash": "df8d4693dc72ec52e776d4ebfbceb97c9565da8a8b83f17efd73b557cbc7e6a9",
-  "pre_install": [
-    "7z x \"$dir\\`$PLUGINSDIR\\*.7z\" -o\"$dir\\`$PLUGINSDIR\\app-64\"",
-    "Remove-Item -R -Path $dir\\resources",
-    "Move-Item $dir\\`$PLUGINSDIR\\app-64\\* $dir -force",
-    "Remove-Item -R -Path $dir\\`$PLUGINSDIR"
-  ],
-  "bin": "Cherry Studio.exe",
-  "shortcuts": [["Cherry Studio.exe", "Cherry Studio"]],
-  "checkver": {
-    "url": "https://github.com/CherryHQ/cherry-studio/releases",
-    "regex": "/releases/tag/v(?<version>.+?)\""
-  },
-  "autoupdate": {
-    "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-portable.exe#/dl.7z"
-  }
+    "version": "0.9.6",
+    "description": "🍒 Cherry Studio is a desktop client that supports for multiple LLM providers",
+    "homepage": "https://github.com/CherryHQ/cherry-studio",
+    "license": {
+        "identifier": "Apache License 2.0"
+    },
+    "depends": "7zip",
+    "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v0.9.6/Cherry-Studio-0.9.6-portable.exe#/dl.7z",
+    "hash": "666e613f53371e5a340bdb4dcb2b15561311bc051c5b402295bdd4d0bbfb96a6",
+    "pre_install": [
+        "7z x \"$dir\\`$PLUGINSDIR\\*.7z\" -o\"$dir\\`$PLUGINSDIR\\app-64\"",
+        "Remove-Item -R -Path $dir\\resources",
+        "Move-Item $dir\\`$PLUGINSDIR\\app-64\\* $dir -force",
+        "Remove-Item -R -Path $dir\\`$PLUGINSDIR"
+    ],
+    "bin": "Cherry Studio.exe",
+    "shortcuts": [
+        [
+            "Cherry Studio.exe",
+            "Cherry Studio"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/CherryHQ/cherry-studio/releases",
+        "regex": "/releases/tag/v(?<version>.+?)\""
+    },
+    "autoupdate": {
+        "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-portable.exe#/dl.7z"
+    }
 }
