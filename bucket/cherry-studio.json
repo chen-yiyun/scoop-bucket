@@ -1,31 +1,42 @@
 {
     "version": "0.9.6",
-    "description": "🍒 Cherry Studio is a desktop client that supports for multiple LLM providers",
-    "homepage": "https://github.com/CherryHQ/cherry-studio",
+    "description": "A desktop client that supports for multiple LLM providers.",
+    "homepage": "https://github.com/kangfenmao/cherry-studio",
     "license": {
-        "identifier": "Apache License 2.0"
+        "identifier": "Apache-2.0",
+        "url": "https://github.com/kangfenmao/cherry-studio/raw/refs/heads/main/LICENSE"
     },
-    "depends": "7zip",
-    "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v0.9.6/Cherry-Studio-0.9.6-portable.exe#/dl.7z",
-    "hash": "666e613f53371e5a340bdb4dcb2b15561311bc051c5b402295bdd4d0bbfb96a6",
-    "pre_install": [
-        "7z x \"$dir\\`$PLUGINSDIR\\*.7z\" -o\"$dir\\`$PLUGINSDIR\\app-64\"",
-        "Remove-Item -R -Path $dir\\resources",
-        "Move-Item $dir\\`$PLUGINSDIR\\app-64\\* $dir -force",
-        "Remove-Item -R -Path $dir\\`$PLUGINSDIR"
+    "url": "https://github.com/kangfenmao/cherry-studio/releases/download/v0.9.6/Cherry-Studio-0.9.6-setup.exe#/dl.7z",
+    "hash": "e6bf28259c83f9aa35ddbf04f564472d955136632692a1ddc2f5623dcd3722bc",
+    "architecture": {
+        "64bit": {
+            "installer": {
+                "script": [
+                    "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
+                    "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$R0\" -Force -Recurse"
+                ]
+            }
+        }
+    },
+    "persist": "data",
+    "post_install": [
+        "if (Test-Path $env:APPDATA\\CherryStudio) {",
+        "    Copy-Item -Path $env:APPDATA\\CherryStudio\\* -Destination \"$persist_dir\\data\" -Force -Recurse",
+        "    Remove-Item $env:APPDATA\\CherryStudio -Force -Recurse",
+        "}",
+        "New-Item -ItemType Junction -Path $env:APPDATA\\CherryStudio -Target $persist_dir\\data | Out-Null"
     ],
-    "bin": "Cherry Studio.exe",
+    "uninstaller": {
+        "script": "Remove-Item $env:APPDATA\\CherryStudio -Force -Recurse"
+    },
     "shortcuts": [
         [
             "Cherry Studio.exe",
             "Cherry Studio"
         ]
     ],
-    "checkver": {
-        "url": "https://github.com/CherryHQ/cherry-studio/releases",
-        "regex": "/releases/tag/v(?<version>.+?)\""
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/CherryHQ/cherry-studio/releases/download/v$version/Cherry-Studio-$version-portable.exe#/dl.7z"
+        "url": "https://github.com/kangfenmao/cherry-studio/releases/download/v$version/Cherry-Studio-$version-setup.exe#/dl.7z"
     }
 }
