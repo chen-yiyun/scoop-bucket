@@ -5,14 +5,11 @@
     "extract_dir": ["FFRenamePro_x64", "FFRenamePro_X86"],
     "architecture": {
         "64bit": {
-            "url": "http://www.ffhome.com/download/FFRenamePro_x64_9.21.rar",
-            "hash": "ac7aac88633a6bec5bad2f4c66acaf6574d70c5b14f753eb7bc70ae2488e4c9c"
-        },
-        "32bit": {
-            "url": "http://www.ffhome.com/download/FFRenamePro_x86_9.21.rar",
-            "hash": "ac7aac88633a6bec5bad2f4c66acaf6574d70c5b14f753eb7bc70ae2488e4c9c"
+            "url": "https://cloud-0-index.vercel.app/api/raw/?path=/packages/scoop/FFRenamePro_x64_5.0.9.21.zip",
+            "hash": "b5eaff6c1978288e3d1d9e96e4ce9cba539f39fce9991cd48a28bd2f6298404a"
         }
     },
+
     "pre_install": [
         "Move-Item -Path \"$dir\\FFRenamePro_x64\\*\" -Destination \"$dir\" -Force"
     ],
@@ -21,16 +18,10 @@
     ],
     "bin": "FFRenamePro.exe",
     "shortcuts": [["FFRenamePro.exe", "FFRenamePro"]],
-    "checkver": "(\\d+\\.\\d+)\\ for Windows 32-bit",
-    "autoupdate": {
-        "architecture": {
-            "64bit": {
-                "url": "http://www.ffhome.com/download/FFRenamePro_x64_$version.rar"
-            },
-            "32bit": {
-                "url": "http://www.ffhome.com/download/FFRenamePro_x86_$version.rar"
-            }
-        }
+    "notes": "Copyright: FFHOME.COM",
+    "checkver": {
+        "url": "http://www.ffhome.com/works/1406.html",
+        "regex": "\\s+([\\d.]+)\\s+for Windows"
     }
 }
 
