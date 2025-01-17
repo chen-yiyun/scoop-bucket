@@ -9,8 +9,8 @@
             "hash": "b450e760705b7f86101d8aa599a1b1af2a57564521a3be3b5fa2faf1aed4a0ec"
         }
     },
-    "bin": ["DarkThumbs.exe"],
-    "shortcuts": [["DarkThumbs.exe", "DarkThumbs"]],
+    "bin": ["CBXManager.exe"],
+    "shortcuts": [["CBXManager.exe", "DarkThumbs"]],
     "checkver": {
         "url": "https://github.com/fire-eggs/DarkThumbs/releases",
         "regex": "/releases/tag/v(?<version>.+?)\""
