@@ -1,9 +1,9 @@
 {
-    "version": "0.10.2",
+    "version": "0.10.3",
     "homepage": "https://janereader.com/",
     "license": "unknown",
-    "url": "https://janereader.com/downloads/releases/windows/x86_64/0.10.2",
-    "hash": "0e251c91176a44ebb74192d622d4e70526bb74970ff2d82d3ffa61b0b3c297fc",
+    "url": "https://janereader.com/downloads/releases/windows/x86_64/0.10.3",
+    "hash": "7c43381bccc9785f83ad9c54695ff761b50d7766a252e99bd40f46124484f042",
     "installer": {
         "script": [
             "$pkgfile = (Get-ChildItem \"$dir\" '*' | Select-Object -First 1).FullName",
