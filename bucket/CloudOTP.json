@@ -5,7 +5,7 @@
   "license": "GPLv3",
   "architecture": {
     "64bit": {
-      "url": "https://github.com/Robert-Stackflow/CloudOTP/releases/download/3.1.2/CloudOTP-3.1.2-windows-x86_64.zip",
+      "url": "https://github.com/Robert-Stackflow/CloudOTP/releases/download/V3.1.2/CloudOTP-3.1.2-windows-x86_64.zip",
       "hash": "8d8626f65e0090ddc1f2673dd440ac42923d939db1695d760ebac821d2ff958f"
     }
   },
@@ -23,8 +23,9 @@
   "autoupdate": {
     "architecture": {
       "64bit": {
-        "url": "https://github.com/Robert-Stackflow/CloudOTP/releases/download/$version/CloudOTP-$version-windows-x86_64.zip"
+        "url": "https://github.com/Robert-Stackflow/CloudOTP/releases/download/V$version/CloudOTP-$version-windows-x86_64.zip"
       }
     }
   }
 }
+
